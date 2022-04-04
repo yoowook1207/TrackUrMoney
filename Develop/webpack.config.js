@@ -5,7 +5,8 @@ const WebpackPwaManifest = require("webpack-pwa-manifest");
 
 const config = {
     entry: {
-      app: "./public/js/index.js"
+      app: "./public/js/index.js",
+      IDB: "./public/js/idb.js"
     },
     output: {
       filename: "[name].bundle.js",
@@ -47,7 +48,7 @@ const config = {
         inject: false,
         icons: [{
           src: path.resolve("public/icons/icon-512x512.png"),
-          sizes: [96, 128, 192, 256, 384, 512],
+          sizes: [72, 96, 128, 144, 152, 192, 384, 512],
           destination: path.join("assets", "icons")
         }]
       }),
